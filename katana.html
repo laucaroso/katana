@@ -1,0 +1,96 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>Framework</title>
+	<script type="text/javascript" src="js/katana.js"></script>
+	<style type="text/css">
+		*{margin:0;}
+		#container{
+			width: 1024px;
+			border: solid 1px #ccc;
+			min-height: 500px;
+			font-size: 18px;
+			font-family: "sans-serif";
+			color: #333;
+		}
+
+		.header{
+			width: 100%;
+			background: #ccc;
+		}
+
+		.header h1{
+			font-size: 32px;
+			width: 100%;
+			text-align: center;
+		}
+
+		.header nav{
+			width: 100%;
+			text-align: right;
+		}
+		.header nav ul li{
+			display: inline-block;
+		}
+
+		.header nav a{
+			text-decoration: none;
+			color: orange;
+		}
+
+		.header nav a:hover{
+			text-decoration: underline;
+		}
+
+		.wrapper{
+
+		}
+
+		.footer{
+
+		}
+	</style>
+</head>
+<body>
+	<div id="container">
+		
+	</div>
+	<script type="text/javascript">
+(function(){
+	//------- HEADER -----------
+	var opch = {
+		"id": "header",
+		"class": "header"
+	}
+	var h = $.crear("div",opch);
+	var opcNav = {
+		"id": "nav"
+	}
+	var nav = $.crear("div", opcNav);
+	//console.log(nav);
+	h.metele(nav);
+
+	//------- WRAPPER -----------
+	var opcw = {
+		"id": "wrapper",
+		"class": "wrapper"
+	}
+	//------- FOOTER -----------
+	var opcf = {
+		"id": "footer",
+		"class": "footer"
+	}
+	
+	var w = $.crear("div",opcw);
+	var f = $.crear("div",opcf);
+	$.obt('container').metele(h);
+	$.obt('container').metele(w);
+	$.obt('container').metele(f);
+
+})();
+	</script>
+</body>
+</html>
+
+
